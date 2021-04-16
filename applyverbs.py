@@ -22,7 +22,7 @@ try:
 except Exception as e:
     print(str(e))
     exit()
-debug = sys.argv.__contains__('-d')
+debug = '-d' in sys.argv
 verbstrings = f.read().splitlines()
 verbsegments = list(map(validate, verbstrings))
 f.close()
