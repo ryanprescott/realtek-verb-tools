@@ -2,7 +2,6 @@ import subprocess
 import os
 import sys
 import time
-
 def validate(verbstring):
     try:
         verbsegments = verbstring.split(' ')
@@ -10,8 +9,7 @@ def validate(verbstring):
         return verbsegments
     except Exception as e:
         print('One or more verb strings was invalid.')
-        exit()
-        
+        exit()   
 if os.geteuid() != 0:
     print('You must run this script with sudo.')
     exit()
