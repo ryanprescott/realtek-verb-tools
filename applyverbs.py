@@ -13,7 +13,6 @@ def validate(verbstring):
 if os.geteuid() != 0:
     print('You must run this script with sudo.')
     exit()
-
 if len(sys.argv) == 1:
     print('Usage: ./applyverbs.py path_to_verbs [-d]')
     print('   -d:\tDebug mode. Adds a delay and prints verbs')
