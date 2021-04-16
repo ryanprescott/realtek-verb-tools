@@ -2,7 +2,7 @@
 These tools are used for troubleshooting sound issues with Realtek chipsets on Linux.
 
 ## cleanverbs
-This tool takes output dumped from [a specially modified version of QEMU](https://github.com/jcs/qemu) and removes unnecessary output to leave only HDA verbs passed through to a sound card connected via VFIO.
+This tool takes output dumped from [a specially modified version of QEMU](https://github.com/jcs/qemu) and removes unnecessary output to leave only Realtek amplifier coefficient  verbs passed through to a sound card connected via VFIO.
 
 Usage: python3 ./cleanverbs.py output-from-qemu-file
 
