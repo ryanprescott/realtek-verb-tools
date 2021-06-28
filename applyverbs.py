@@ -4,6 +4,8 @@ import sys
 import time
 def validate(verbstring):
     try:
+        if verbstring[:1] in '#/;':
+            return None
         verbsegments = verbstring.split(' ')
         int(verbsegments[0], 16) and int(verbsegments[1], 16) and int(verbsegments[2], 16)
         return verbsegments
@@ -29,6 +31,10 @@ f.close()
 print('Applying verbs...')
 for i in range(0, len(verbsegments)):
     segment = verbsegments[i]
+    if not segment:
+        if debug:
+            print('[%d]\t%s' % (i+1, verbstrings[i]))
+        continue
     args = ['hda-verb', '/dev/snd/hwC0D0', *segment]
     result = subprocess.run(args, stderr=subprocess.DEVNULL, stdout=subprocess.PIPE).stdout.decode('utf-8')
     response = result[8:len(result)-1]
