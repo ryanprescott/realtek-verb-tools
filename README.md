@@ -11,6 +11,6 @@ Usage: python3 ./cleanverbs.py output-from-qemu-file
 ## applyverbs
 This tool takes output from cleanverbs and applies each verb to the sound card.
 
-Usage: python3 ./applyverbs.txt output-from-cleanverbs [-d]
+Usage: python3 ./applyverbs.py output-from-cleanverbs [-d]
 
 The -d flag gives more verbose output and also adds a delay so you can see which verbs are necessary to activate the speakers.
